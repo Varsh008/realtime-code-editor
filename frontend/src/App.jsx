@@ -4,7 +4,12 @@ import io from "socket.io-client";
 import Editor from "@monaco-editor/react";
 
 
-const socket = io("https://realtime-code-editor-5f8d.vercel.app/");
+// const socket = io("https://realtime-code-editor-5f8d.vercel.app/");
+
+const socket = io("https://realtime-editor-backend.vercel.app", {
+  path: "/api"
+});
+
 
 const App = () => {
   const [joined, setJoined] = useState(false);

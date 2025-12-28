@@ -85,7 +85,6 @@ import { Server } from "socket.io";
 const app = express();
 const rooms = new Map();
 
-// Socket.IO Serverless setup
 let io;
 
 export default function handler(req, res) {
@@ -94,7 +93,6 @@ export default function handler(req, res) {
   } else {
     console.log('Starting Socket.IO server...');
     
-    // Initialize Socket.IO once
     io = new Server(res.socket.server, {
       cors: { origin: "*" }
     });

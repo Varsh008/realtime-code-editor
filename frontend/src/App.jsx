@@ -4,9 +4,7 @@ import io from "socket.io-client";
 import Editor from "@monaco-editor/react";
 
 
-// const socket = io("https://realtime-code-editor-5f8d.vercel.app/");
-
-const socket = io("https://realtime-editor-backend.vercel.app", {
+const socket = io(`${import.meta.env.VITE_BACKEND_URL || 'https://realtime-editor-backend.vercel.app'}`, {
   path: "/api"
 });
 
